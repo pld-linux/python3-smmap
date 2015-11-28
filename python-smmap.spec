@@ -7,7 +7,7 @@ Summary:	A pure git implementation of a sliding window memory map manager
 # Name must match the python module/package name (as in 'import' statement)
 Name:		python-%{module}
 Version:	0.8.2
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Languages/Python
 Source0:	http://pypi.python.org/packages/source/s/smmap/%{module}-%{version}.tar.gz
