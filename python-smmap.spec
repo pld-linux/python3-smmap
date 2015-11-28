@@ -28,16 +28,13 @@ A pure git implementation of a sliding window memory map manager.
 %setup -q -n %{module}-%{version}
 
 %build
-%{__python} setup.py build
+%py_build
 
 %{?with_tests:%{__python} setup.py test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install \
-	--skip-build \
-	--optimize=2 \
-	--root=$RPM_BUILD_ROOT
+%py_install
 
 %{__rm} -r $RPM_BUILD_ROOT%{py_sitescriptdir}/smmap/test
 
