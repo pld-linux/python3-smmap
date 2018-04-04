@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_with	tests	# do not perform "make test"
 
 %define		module	smmap
 Summary:	A pure git implementation of a sliding window memory map manager
