@@ -2,16 +2,16 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 
-%define 	module	smmap
+%define		module	smmap
 Summary:	A pure git implementation of a sliding window memory map manager
 # Name must match the python module/package name (as in 'import' statement)
 Name:		python-%{module}
-Version:	0.8.2
-Release:	2
+Version:	2.0.3
+Release:	1
 License:	BSD
 Group:		Development/Languages/Python
-Source0:	http://pypi.python.org/packages/source/s/smmap/%{module}-%{version}.tar.gz
-# Source0-md5:	f5426b7626ddcf5e447253fae0396b0c
+Source0:	https://github.com/gitpython-developers/smmap/archive/v%{version}/%{module}-%{version}.tar.gz
+# Source0-md5:	87427acfb9d65867544d34a12434e502
 URL:		https://github.com/Byron/smmap
 BuildRequires:	python-distribute
 BuildRequires:	rpm-pythonprov
@@ -47,4 +47,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %dir %{py_sitescriptdir}/smmap
 %{py_sitescriptdir}/smmap/*.py[co]
-%{py_sitescriptdir}/smmap-*.egg-info
+%{py_sitescriptdir}/smmap2-*.egg-info
