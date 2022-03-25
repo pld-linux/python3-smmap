@@ -9,7 +9,7 @@ Summary:	A pure Python implementation of a sliding window memory map manager
 Summary(pl.UTF-8):	Czysto pythonowa implementacja zarządcy odwzorowania w pamięci z przesuwnym oknem
 Name:		python-%{module}
 Version:	3.0.5
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Languages/Python
 #Source0Download: https://github.com/gitpython-developers/smmap/releases
