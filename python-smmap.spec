@@ -8,11 +8,12 @@
 Summary:	A pure Python implementation of a sliding window memory map manager
 Summary(pl.UTF-8):	Czysto pythonowa implementacja zarządcy odwzorowania w pamięci z przesuwnym oknem
 Name:		python-%{module}
+# keep 3.x here for python2 support
 Version:	3.0.5
 Release:	3
 License:	BSD
 Group:		Development/Languages/Python
-#Source0Download: https://github.com/gitpython-developers/smmap/releases
+#Source0Download: https://github.com/gitpython-developers/smmap/tags
 Source0:	https://github.com/gitpython-developers/smmap/archive/v%{version}/%{module}-%{version}.tar.gz
 # Source0-md5:	d57faa25108519e16650ec228c1b7bd1
 URL:		https://github.com/gitpython-developers/smmap
@@ -95,7 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %dir %{py_sitescriptdir}/smmap
 %{py_sitescriptdir}/smmap/*.py[co]
-%{py_sitescriptdir}/smmap*-%{version}-py*.egg-info
+%{py_sitescriptdir}/smmap-%{version}-py*.egg-info
 %endif
 
 %if %{with python3}
@@ -104,5 +105,5 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{py3_sitescriptdir}/smmap
 %{py3_sitescriptdir}/smmap/*.py
 %{py3_sitescriptdir}/smmap/__pycache__
-%{py3_sitescriptdir}/smmap*-%{version}-py*.egg-info
+%{py3_sitescriptdir}/smmap-%{version}-py*.egg-info
 %endif
