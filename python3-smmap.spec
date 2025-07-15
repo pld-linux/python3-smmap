@@ -7,15 +7,16 @@
 Summary:	A pure Python implementation of a sliding window memory map manager
 Summary(pl.UTF-8):	Czysto pythonowa implementacja zarządcy odwzorowania w pamięci z przesuwnym oknem
 Name:		python3-%{module}
-Version:	6.0.0
+# don't use 6.0.0, it was replaced by 5.0.1
+Version:	5.0.2
 Release:	1
 License:	BSD
 Group:		Development/Languages/Python
 #Source0Download: https://github.com/gitpython-developers/smmap/tags
 Source0:	https://github.com/gitpython-developers/smmap/archive/v%{version}/%{module}-%{version}.tar.gz
-# Source0-md5:	bfd542ce042dad28b43c372ad6f1912b
+# Source0-md5:	37517d24b2947ab702dec7367fff5492
 URL:		https://github.com/gitpython-developers/smmap
-BuildRequires:	python3-modules >= 1:3.8
+BuildRequires:	python3-modules >= 1:3.7
 BuildRequires:	python3-setuptools
 %if %{with tests}
 BuildRequires:	python3-pytest
@@ -25,7 +26,7 @@ BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with doc}
 BuildRequires:	sphinx-pdg-3
 %endif
-Requires:	python3-modules >= 1:3.8
+Requires:	python3-modules >= 1:3.7
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
